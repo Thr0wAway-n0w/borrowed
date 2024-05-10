@@ -76,10 +76,11 @@ if __name__ == "__main__":
         raise KeyboardInterrupt
 
     print(f"{Fore.CYAN}══════════════════════════════════════════════════════{Style.RESET_ALL}")
-    print(f"{Fore.GREEN}🎉 Scan complete. Open ports: 🎉{Style.RESET_ALL}")
+    print(f"{Fore.GREEN} Scan complete. Open ports: {Style.RESET_ALL}")
     if open_ports:
-        print(f" {Fore.GREEN}🎉 Open ports found: 🎉{Style.RESET_ALL}")
+        print(f" {Fore.GREEN} Open ports found: {Style.RESET_ALL}")
         pprint(open_ports, indent=4, width=40)
-        print(f"{Fore.GREEN}🎉 Total open ports found: {len(open_ports)} 🎉{Style.RESET_ALL}")
+        print(" ")
+        print(f"{Fore.GREEN} Total open ports found: {len(open_ports)} {Style.RESET_ALL}")
     else:
         print(f"{Fore.RED}{ERROR_EMOJI} No open ports found on the target.{Style.RESET_ALL}")
